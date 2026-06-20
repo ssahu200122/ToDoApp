@@ -63,12 +63,13 @@ class MainWindow(QMainWindow):
 
     def item_toggled(self,item):
         font = item.font()
+        
         if item.checkState() == Qt.Checked:
             font.setStrikeOut(True)
-            item.setFont(font)
         else:
             font.setStrikeOut(False)
-            item.setFont(font)
+        
+        item.setFont(font)
             
 
         
